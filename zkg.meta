@@ -1,0 +1,18 @@
+[package]
+script_dir = scripts
+test_command = cd testing && btest -c btest.cfg
+summary = SSH client and server fingerprints.
+description = HASSH is used to identify specific Client and Server SSH implementations. The fingerprints can be stored, searched and shared in the form of an MD5 fingerprint. This package logs components to ssh.log
+tags = bro plugin, ssh, fingerprint, logging
+version = 2.0
+depends = 
+	zeek >=4.0.0
+
+[template]
+source = https://github.com/zeek/package-template
+version = v3.1.0
+zkg_version = 2.14.0
+
+[template_vars]
+name = hassh
+
