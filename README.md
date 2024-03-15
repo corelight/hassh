@@ -5,6 +5,7 @@
   
 </p>
 
+NOTE: This Corelight repository was created so that it can be actively maintained, as per a request from Salesforce whose original repository is not being maintained.  
 
 "HASSH" is a network fingerprinting standard which can be used to identify specific Client and Server SSH implementations. The fingerprints can be easily stored, searched and shared in the form of an MD5 fingerprint.
 
