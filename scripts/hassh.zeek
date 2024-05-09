@@ -19,7 +19,7 @@ redef record SSH::Info += {
 	sshka: string &log &optional;
 
 	# The algorithms that went into the server hash.
-	hasshServer_Algorithms: string &log &optional;
+	hasshServerAlgorithms: string &log &optional;
 };
 
 option log_raw_hassh_algorithms = T;
@@ -68,7 +68,7 @@ function get_hasshServer(c: connection, capabilities: SSH::Capabilities)
 	c$ssh$hasshServer = md5_hash(algo_list);
 
 	if ( log_raw_hassh_algorithms )
-		c$ssh$hasshServer_Algorithms = algo_list;
+		c$ssh$hasshServerAlgorithms = algo_list;
 
 	if ( log_key_algorithm )
 		c$ssh$sshka = join_string_vec(capabilities$server_host_key_algorithms, ",");
